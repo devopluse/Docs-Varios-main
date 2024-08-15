@@ -1,0 +1,10 @@
+Agregar Git a un nuevo proyecto
+1- En la consola vamos a la carpeta donde tenemos la solucion
+2- Ejecutamos "git init" para crear el repositorio
+3- Ejecutamos "git add ." para agregar todo el contenido de carpetas y subcarpetas al repositorio
+4- Ejecutamos "git commit -m "primer commit" para hacer un commit inicial
+5- Vamos a la cuenta de Github y creamos un nuevo repositorio con los datos del proyecto
+6- Ejecutamos "git remote add origin https://github.com/devopeldar/CPSubeInstalador.git" 
+7- Ejecutamos "git push -u origin master" y ya queda mapeado
+
+**OPCIONAL: "git branch -M main" para cambiar el nombre de la rama principal de "master" a "main"

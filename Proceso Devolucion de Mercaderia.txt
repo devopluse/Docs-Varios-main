@@ -1,0 +1,16 @@
+Proceso: Devolucion de Mercaderia de Sucursal
+	El Proposito de este Proceso es que la sucursal pueda devolver saldo que no utilizara.
+
+	Este Proceso involucra Dos Procedimientos almacenados que se detallan a continuacion. El de Eldar se ejecuta con la accion del 	android distribuidor y el de Fusion se ejecuta con un Job Programado cada 3 minutos.
+
+JOB FUSION Procesar Remitos De Devolucion
+
+SP Fusion: AutDevolucionVentaAutomaticaSube
+		Genera Remito de Devolucion de Cliente
+		Actualiza Stock de la Sucursal y Argentina en Fusion
+		Modifica la Cuenta Corriente con tipo de movimiento 61 que es devolucion de Mercaderia
+
+SP Eldar: AndroidSolicitudDevolucionStockSUBE	
+		Genera Movimientos de Stock de Devolucion desde la Sucursal a Argentina
+		Quita el Saldo de la Sucursal y lo Envia a Argentina
+		Tambien Modifica la Cuenta Corriente en FinancieroMovimientos
